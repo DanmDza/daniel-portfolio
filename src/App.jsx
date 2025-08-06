@@ -303,12 +303,13 @@ function App() {
               <p className="text-muted-foreground leading-relaxed">
                 My recent capstone project "Hustle" - a mobile gig economy app -
                 won 1st place at Penn State Harrisburg's 2025 Capstone Design
-                Conference.
-              </p>
+                Conference and also recieved $1000 in funding at the Harrisburg
+              </LaunchBox Pitch Competition as a startup.p>
               <p className="text-muted-foreground leading-relaxed">
-                I'm passionate about creating solutions that make a real impact,
-                from HIPAA-compliant healthcare platforms to AI-powered
-                applications.
+                I'm currently working on creating solutions that make a real
+                impact, in the form of a HIPAA-compliant healthcare platforms
+                for healthcare providers that smoothens their daily tasks and
+                processes.
               </p>
 
               {/* Education */}
