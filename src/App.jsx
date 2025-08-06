@@ -295,10 +295,10 @@ function App() {
               </h3>
               <p className="text-muted-foreground leading-relaxed">
                 I'm a passionate Computer Science student at Pennsylvania State
-                University, expected to graduate in May 2025. With hands-on
-                experience as a Software Developer Intern at EG India, I've
-                worked on AI chatbot applications and dynamic user interfaces
-                using React, Python, and Tailwind CSS.
+                University that graduated in May 2025. With hands-on experience
+                as a Software Developer Intern at EG India, I've worked on AI
+                chatbot applications and dynamic user interfaces using React,
+                Python, and Tailwind CSS.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 My recent capstone project "Hustle" - a mobile gig economy app -
