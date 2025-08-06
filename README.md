@@ -30,11 +30,13 @@ This is a personal portfolio website for Daniel Marc D'Souza, built with React, 
     # or yarn install
     ```
 3.  **Run the development server:**
+
     ```bash
     pnpm run dev
     # or npm run dev
     # or yarn dev
     ```
+
     The application will be available at `http://localhost:5173` (or another port if 5173 is in use).
 
 4.  **Build for production:**
@@ -45,23 +47,6 @@ This is a personal portfolio website for Daniel Marc D'Souza, built with React, 
     ```
     This will create a `dist` directory with the production-ready build.
 
-## Custom Domain Setup
-
-To set up a custom domain (e.g., `danielmarcdsouza.com`), you will need to configure DNS records with your domain registrar. Here are the typical steps:
-
-1.  **Log in to your domain registrar's website.**
-2.  **Navigate to the DNS management page for your domain.**
-3.  **Add the following records:**
-    *   **CNAME Record:**
-        *   **Host (or Name):** `www`
-        *   **Value (or Target):** `[YOUR_DEPLOYMENT_URL_WITHOUT_HTTPS_PREFIX]` (e.g., `wywnnpky.manus.space`)
-    *   **A Record:**
-        *   **Host (or Name):** `@` (or your root domain)
-        *   **Value (or Target):** `76.76.21.21`
-
-**Note:** DNS changes can take up to 48 hours to propagate globally.
-
 ## Contact
 
 For any inquiries, please contact Daniel Marc D'Souza at danielmarcdsouza@gmail.com.
-
