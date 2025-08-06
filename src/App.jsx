@@ -308,8 +308,8 @@ function App() {
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 I'm currently working on creating solutions that make a real
-                impact, in the form of a HIPAA-compliant healthcare platforms
-                for healthcare providers that smoothens their daily tasks and
+                impact, in the form of a HIPAA-compliant healthcare platform for
+                healthcare providers that smoothens their daily tasks and
                 processes.
               </p>
 
