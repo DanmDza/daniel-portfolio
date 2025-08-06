@@ -304,7 +304,8 @@ function App() {
                 My recent capstone project "Hustle" - a mobile gig economy app -
                 won 1st place at Penn State Harrisburg's 2025 Capstone Design
                 Conference and also recieved $1000 in funding at the Harrisburg
-              </LaunchBox Pitch Competition as a startup.p>
+                LaunchBox Pitch Competition as a startup.
+              </p>
               <p className="text-muted-foreground leading-relaxed">
                 I'm currently working on creating solutions that make a real
                 impact, in the form of a HIPAA-compliant healthcare platforms
