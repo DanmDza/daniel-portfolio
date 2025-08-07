@@ -3,8 +3,6 @@ import { Button } from "@/components/ui/button.jsx";
 import { Card, CardContent } from "@/components/ui/card.jsx";
 import { Badge } from "@/components/ui/badge.jsx";
 import {
-  Github,
-  Linkedin,
   Mail,
   ExternalLink,
   Menu,
@@ -27,9 +25,6 @@ import aboutPic from "./assets/about-pic.png";
 import project1 from "./assets/project-1.png";
 import project2 from "./assets/project-2.png";
 import project3 from "./assets/project-3.png";
-import githubIcon from "./assets/github.png";
-import linkedinIcon from "./assets/linkedin.png";
-import emailIcon from "./assets/email.png";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -241,13 +236,13 @@ function App() {
             Full Stack Developer & Creative Problem Solver
           </p>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto fade-in-up">
-            A Computer Science student at Penn State University, expected to
-            graduate in May 2025. With hands-on experience as a Software
-            Developer Intern at EG India, I've worked on AI chatbot applications
-            and dynamic user interfaces using React, Python, and Tailwind CSS.
-            I'm currently working on a project that makes a real impact, the
-            Electronic Visit Verification (EVV) Platform, which is a
-            HIPAA-compliant healthcare platform for healthcare providers.
+            A Computer Science student at Penn State University that graduated
+            in May 2025. With hands-on experience as a Software Developer Intern
+            at EG India, I've worked on AI chatbot applications and dynamic user
+            interfaces using React, Python, and Tailwind CSS. I'm currently
+            working on a project that makes a real impact, the Electronic Visit
+            Verification (EVV) Platform, which is a HIPAA-compliant healthcare
+            platform for healthcare providers.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center fade-in-up">
             <Button
