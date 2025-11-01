@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button.jsx";
-import { Card, CardContent } from "@/components/ui/card.jsx";
-import { Badge } from "@/components/ui/badge.jsx";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import {
   Mail,
   ExternalLink,
@@ -18,13 +18,31 @@ import {
   Download,
 } from "lucide-react";
 import "./App.css";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
 
 // Import images
 import profilePic from "./assets/profile-pic.png";
 import aboutPic from "./assets/about-pic.png";
-import project1 from "./assets/project-1.png";
-import project2 from "./assets/project-2.png";
-import project3 from "./assets/project-3.png";
+
+// Hustle images
+import hustle1 from "./assets/1-Hustle.jpg";
+import hustle2 from "./assets/2-Hustle.jpg";
+import hustle3 from "./assets/3-Hustle.jpg";
+import hustle4 from "./assets/4-Hustle.jpg";
+import hustle5 from "./assets/hustle-5.jpg";
+import hustle6 from "./assets/hustle-6.jpg";
+
+// AI Chatbot images
+import aiChatbotCover from "./assets/AIchatbotcover.png";
+import aichatbot from "./assets/Aichatbot.png";
+
+// EVV images
+import evv1 from "./assets/EVV1.png";
+import evv2 from "./assets/EVV2.png";
+import evv3 from "./assets/EVV3.png";
+import evv4 from "./assets/EVV4.png";
+import evv5 from "./assets/EVV5.png";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -96,7 +114,7 @@ function App() {
       title: "Hustle - Mobile Gig App",
       description:
         "Built mobile app (iOS/Android) for posting and completing quick-gig jobs with secure authentication, job filters, and AWS S3 image uploads in React Native. Won 1st place in Penn State Harrisburg's 2025 Capstone Design Conference.",
-      image: project1,
+      images: [hustle1, hustle2, hustle3, hustle4, hustle5, hustle6], // Updated
       technologies: ["React Native", "AWS S3", "Socket.io", "NLP"],
       github: "#",
       demo: "#",
@@ -106,7 +124,7 @@ function App() {
       title: "AI Chatbot Platform",
       description:
         "Developed an AI chatbot project with a dynamic table component, enhancing user interaction and support. Created front-end features using React, optimizing performance and user experience.",
-      image: project2,
+      images: [aiChatbotCover, aichatbot], // Updated
       technologies: ["React", "Python", "Tailwind", "AI/ML"],
       github: "#",
       demo: "#",
@@ -114,8 +132,8 @@ function App() {
     {
       title: "Electronic Visit Verification (EVV) Platform",
       description:
-        "Developed a HIPAA-compliant Electronic Visit Verification platform for home healthcare providers with geofencing, timestamp validation, and audit-ready documentation.",
-      image: project3,
+        "Developed a HIPAA-compliant Electronic Visit Verification (EVV) platform for home healthcare providers with geofencing, timestamp validation, and audit-ready documentation.",
+      images: [evv1, evv2, evv3, evv4, evv5], // Updated
       technologies: ["React", "Node.js", "HIPAA", "Geofencing"],
       github: "#",
       demo: "#",
@@ -136,7 +154,7 @@ function App() {
   const education = {
     degree: "B.S. in Computer Science",
     school: "Pennsylvania State University",
-    period: "Expected May 2025",
+    period: "Graduated May 2025",
     coursework: [
       "Computer Organization and Architecture",
       "Programming and Computation II: Data Structures",
@@ -153,7 +171,7 @@ function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground snap-y snap-mandatory">
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 nav-blur border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -219,7 +237,7 @@ function App() {
       {/* Hero Section */}
       <section
         id="home"
-        className="min-h-screen flex items-center justify-center hero-gradient"
+        className="min-h-screen flex items-center justify-center hero-gradient snap-start"
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-8 fade-in-up">
@@ -236,13 +254,11 @@ function App() {
             Full Stack Developer & Creative Problem Solver
           </p>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto fade-in-up">
-            A Computer Science student at Penn State University that graduated
-            in May 2025. With hands-on experience as a Software Developer Intern
-            at EG India, I've worked on AI chatbot applications and dynamic user
-            interfaces using React, Python, and Tailwind CSS. I'm currently
-            working on a project that makes a real impact, the Electronic Visit
-            Verification (EVV) Platform, which is a HIPAA-compliant healthcare
-            platform for healthcare providers.
+            A recent Computer Science graduate from Pennsylvania State
+            University, I am a passionate developer with hands-on experience in
+            AI applications and dynamic user interfaces. I am currently on an F1
+            visa (post-OPT) and am not subject to the new H-1B lottery
+            regulations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center fade-in-up">
             <Button
@@ -254,7 +270,7 @@ function App() {
             <Button
               variant="outline"
               onClick={() =>
-                window.open("/DanielMarcD_Souza-Resume.pdf", "_blank")
+                window.open("/DanielMarcD_SouzaResume.pdf", "_blank")
               }
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
             >
@@ -271,7 +287,7 @@ function App() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20">
+      <section id="about" className="py-20 snap-start">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
             About Me
@@ -289,23 +305,23 @@ function App() {
                 Hello, I'm Daniel
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                I'm a passionate Computer Science student at Pennsylvania State
-                University that graduated in May 2025. With hands-on experience
-                as a Software Developer Intern at EG India, I've worked on AI
-                chatbot applications and dynamic user interfaces using React,
-                Python, and Tailwind CSS.
+                As a recent Computer Science graduate from Pennsylvania State
+                University, I have a strong foundation in software development
+                and a passion for creating impactful solutions. My experience as
+                a Software Developer Intern at EG India allowed me to contribute
+                to AI chatbot applications and build dynamic user interfaces
+                using React, Python, and Tailwind CSS.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                My recent capstone project "Hustle" - a mobile gig economy app -
-                won 1st place at Penn State Harrisburg's 2025 Capstone Design
-                Conference and also recieved $1000 in funding at the Harrisburg
-                LaunchBox Pitch Competition as a startup.
+                My capstone project, "Hustle," a mobile gig economy app, not
+                only won 1st place at the Penn State Harrisburg's 2025 Capstone
+                Design Conference but also secured $1000 in funding at the
+                Harrisburg LaunchBox Pitch Competition.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                I'm currently working on creating solutions that make a real
-                impact, in the form of a HIPAA-compliant healthcare platform for
-                healthcare providers that smoothens their daily tasks and
-                processes.
+                I am currently seeking opportunities where I can apply my skills
+                to solve real-world problems and contribute to innovative
+                projects.
               </p>
 
               {/* Education */}
@@ -346,7 +362,7 @@ function App() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 bg-card/50">
+      <section id="skills" className="py-20 bg-card/50 snap-start">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
             Skills & Expertise
@@ -399,7 +415,7 @@ function App() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20">
+      <section id="projects" className="py-20 snap-start">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
             Featured Projects
@@ -412,13 +428,16 @@ function App() {
                   project.featured ? "lg:col-span-2" : ""
                 }`}
               >
-                <div className="aspect-video project-image flex items-center justify-center">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+                <Carousel showThumbs={false} infiniteLoop useKeyboardArrows>
+                  {project.images.map((image, i) => (
+                    <div key={i}>
+                      <img
+                        src={image}
+                        alt={`${project.title} screenshot ${i + 1}`}
+                      />
+                    </div>
+                  ))}
+                </Carousel>
                 <CardContent className="p-6">
                   <div className="flex items-start justify-between mb-3">
                     <h3 className="text-xl font-semibold">{project.title}</h3>
@@ -428,7 +447,7 @@ function App() {
                       </Badge>
                     )}
                   </div>
-                  <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
+                  <p className="text-muted-foreground text-sm mb-4">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
@@ -442,21 +461,22 @@ function App() {
                       </Badge>
                     ))}
                   </div>
-                  <div className="flex gap-3">
+                  <div className="flex gap-4">
                     <Button
-                      size="sm"
                       variant="outline"
-                      className="flex items-center gap-2"
+                      size="sm"
+                      onClick={() => window.open(project.github, "_blank")}
+                      className="flex-1"
                     >
-                      <Github className="w-4 h-4" />
-                      Code
+                      <ExternalLink className="w-4 h-4 mr-2" /> GitHub
                     </Button>
                     <Button
+                      variant="outline"
                       size="sm"
-                      className="flex items-center gap-2 bg-primary hover:bg-primary/90"
+                      onClick={() => window.open(project.demo, "_blank")}
+                      className="flex-1"
                     >
-                      <ExternalLink className="w-4 h-4" />
-                      Demo
+                      <ExternalLink className="w-4 h-4 mr-2" /> Live Demo
                     </Button>
                   </div>
                 </CardContent>
@@ -467,85 +487,48 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-card/50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">Let's Connect</h2>
-          <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
-            I'm always interested in new opportunities and collaborations.
-            Whether you have a project in mind or just want to chat about
-            technology, feel free to reach out!
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <a
-              href="mailto:danielmarcdsouza@gmail.com"
-              className="flex flex-col items-center gap-4 p-6 bg-card rounded-lg border hover:border-primary transition-colors group"
-            >
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                <Mail className="w-6 h-6 text-primary" />
-              </div>
+      <section id="contact" className="py-20 bg-card/50 snap-start">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+            Get In Touch
+          </h2>
+          <div className="flex flex-col md:flex-row justify-center items-center gap-8">
+            <div className="flex items-center gap-4 bg-card p-6 rounded-lg border shadow-md">
+              <Mail className="w-8 h-8 text-primary" />
               <div>
-                <h3 className="font-semibold mb-1">Email</h3>
-                <p className="text-sm text-muted-foreground">
+                <h3 className="text-lg font-semibold">Email</h3>
+                <a
+                  href="mailto:danielmarcdsouza@gmail.com"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
                   danielmarcdsouza@gmail.com
-                </p>
+                </a>
               </div>
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/daniel-marc-d-souza/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-col items-center gap-4 p-6 bg-card rounded-lg border hover:border-primary transition-colors group"
-            >
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                <Linkedin className="w-6 h-6 text-primary" />
-              </div>
+            </div>
+            <div className="flex items-center gap-4 bg-card p-6 rounded-lg border shadow-md">
+              <ExternalLink className="w-8 h-8 text-primary" />
               <div>
-                <h3 className="font-semibold mb-1">LinkedIn</h3>
-                <p className="text-sm text-muted-foreground">
-                  daniel-marc-d-souza
-                </p>
+                <h3 className="text-lg font-semibold">LinkedIn</h3>
+                <a
+                  href="https://www.linkedin.com/in/danielmarcdsouza/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  linkedin.com/in/danielmarcdsouza
+                </a>
               </div>
-            </a>
-
-            <a
-              href="#"
-              className="flex flex-col items-center gap-4 p-6 bg-card rounded-lg border hover:border-primary transition-colors group"
-            >
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                <Github className="w-6 h-6 text-primary" />
-              </div>
-              <div>
-                <h3 className="font-semibold mb-1">GitHub</h3>
-                <p className="text-sm text-muted-foreground">
-                  View my repositories
-                </p>
-              </div>
-            </a>
-          </div>
-
-          <div className="text-center">
-            <p className="text-sm text-muted-foreground mb-4">
-              Phone: +1 (610) 816-3420
-            </p>
-            <Button
-              onClick={() => window.open("mailto:danielmarcdsouza@gmail.com")}
-              className="bg-primary hover:bg-primary/90 text-primary-foreground"
-            >
-              Send Message
-            </Button>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-8 border-t border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-muted-foreground">
-            © 2025 Daniel Marc D'Souza. Built with React and Tailwind CSS.
-          </p>
-        </div>
+      <footer className="py-8 text-center text-muted-foreground text-sm border-t border-border">
+        <p>
+          &copy; {new Date().getFullYear()} Daniel Marc D'Souza. All rights
+          reserved.
+        </p>
       </footer>
     </div>
   );
