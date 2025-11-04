@@ -94,7 +94,11 @@
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, oklch(0.98 0 0) 0%, oklch(0.7 0.15 160) 100%);
+  background: linear-gradient(
+    135deg,
+    oklch(0.98 0 0) 0%,
+    oklch(0.7 0.15 160) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -119,8 +123,13 @@
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .float-animation {
@@ -143,10 +152,21 @@
 }
 
 .skill-icon {
-  filter: brightness(0) saturate(100%) invert(85%) sepia(8%) saturate(1933%) hue-rotate(120deg) brightness(95%) contrast(86%);
+  filter: brightness(0) saturate(100%) invert(85%) sepia(8%) saturate(1933%)
+    hue-rotate(120deg) brightness(95%) contrast(86%);
 }
 
 .project-image {
-  background: linear-gradient(135deg, oklch(0.7 0.15 160) 0%, oklch(0.5 0.12 160) 100%);
+  background: linear-gradient(
+    135deg,
+    oklch(0.7 0.15 160) 0%,
+    oklch(0.5 0.12 160) 100%
+  );
+}
+.snap-y {
+  scroll-snap-type: y mandatory;
 }
 
+.snap-start {
+  scroll-snap-align: start;
+}
